@@ -1,97 +1,72 @@
-# algoCarreras
-# 🏎️ Ejercicio Modelo: AlgoCarreras
+Se desea desarrollar un sistema para calificar autos de carrera y sus respectivos pilotos.
 
-Necesitamos desarrollar parte de un sistema para calificar autos de carrera y sus pilotos.
+El objetivo del modelo es que sea extensible, permitiendo agregar fácilmente nuevas características del piloto o del auto. Por ejemplo, en el futuro se podrían incluir factores como el tipo de neumáticos, accidentes previos, etc.
 
----
+Descripción general:
+Un Auto tiene asignado un Piloto y posee un conjunto de características técnicas que influyen en su rendimiento.
 
-## ✅ Requisitos Generales
+Un Piloto tiene un nombre y puede tener varias características personales que afectan su desempeño.
 
-> 💡 Sugerencia: Pensá un modelo que permita extenderse fácilmente (por ejemplo, agregar nuevos tipos de características del auto o del piloto).
+Existen distintas características tanto para los autos como para los pilotos. Cada característica suma puntos que contribuyen al rendimiento total del auto.
 
----
+Características personales del piloto:
+Experiencia:
 
-## 🚗 Descripción de un Auto
+Más de 5 años: suma 10 puntos
+Entre 2 y 5 años: suma 5 puntos
+Menos de 2 años: suma 1 punto
 
-- Un Auto tiene:
-  - Un **piloto**
-  - Una serie de **características** que influyen en su rendimiento
+Condición física:
+"Excelente": suma 10 puntos
+"Buena": suma 5 puntos
+"Regular": no suma puntos
 
----
+Títulos obtenidos:
+Cada título suma 2 puntos
 
-## 👨‍✈️ Descripción de un Piloto
+Características técnicas del auto:
+Velocidad máxima:
+Mayor a 300 km/h: suma 10 puntos
+Entre 250 y 300 km/h: suma 5 puntos
+Menor a 250 km/h: no suma puntos
 
-- Tiene un **nombre**
-- Puede tener varias **características personales** que afectan su desempeño
+Peso:
+Menor a 900 kg: suma 5 puntos
+Entre 900 y 1000 kg: suma 3 puntos
+Más de 1000 kg: no suma puntos
 
----
+Características especiales:
+Si el piloto tiene más de 3 títulos, el puntaje total del auto se incrementa un 10%.
+Si el piloto tiene condición física “Excelente”, el puntaje total del auto se duplica.
 
-## 🧩 Descripción de una Característica
+Casos de uso:
+Calcular el puntaje de un auto cuyo piloto tiene:
 
-Actualmente existen:
+4 años de experiencia
 
-### 🔹 Experiencia
-- Más de 5 años → **10 puntos**
-- Entre 2 y 5 años → **5 puntos**
-- Menos de 2 años → **1 punto**
+Condición física “Buena”
 
-### 🔹 Condición física
-- `"Excelente"` → **10 puntos**
-- `"Buena"` → **5 puntos**
-- `"Regular"` → **0 puntos**
+2 títulos
+Y el auto tiene:
 
-### 🔹 Títulos obtenidos
-- **2 puntos por título**
+Velocidad máxima de 280 km/h
 
----
+Peso de 890 kg
 
-## 🚘 Características del Auto
+Calcular el puntaje de un auto cuyo piloto tiene:
 
-### 🔹 Velocidad máxima
-- > 300 km/h → **10 puntos**
-- 250 a 300 km/h → **5 puntos**
-- < 250 km/h → **0 puntos**
+6 años de experiencia
 
-### 🔹 Peso
-- < 900 kg → **5 puntos**
-- 900 a 1000 kg → **3 puntos**
-- > 1000 kg → **0 puntos**
+Condición física “Excelente”
 
----
+4 títulos
+Y el auto tiene:
 
-## ⭐ Características Especiales
+Velocidad máxima de 310 km/h
 
-- Si el piloto tiene **más de 3 títulos**, el auto gana un **bono del 10%**
-- Si el piloto tiene condición física **"Excelente"**, se **duplica** el puntaje del auto
+Peso de 880 kg
 
----
+Se pide:
+Realizar un diagrama de clases completo que represente el modelo propuesto.
 
-## 🧪 Casos de Uso
-
-### ⚙️ Caso 1:
-- Piloto:
-  - 4 años de experiencia
-  - Condición física: “Buena”
-  - 2 títulos
-- Auto:
-  - Velocidad máxima: 280 km/h
-  - Peso: 890 kg
-
-### ⚙️ Caso 2:
-- Piloto:
-  - 6 años de experiencia
-  - Condición física: “Excelente”
-  - 4 títulos
-- Auto:
-  - Velocidad máxima: 310 km/h
-  - Peso: 880 kg
-
----
-
-## 📝 Se pide
-
-- ✅ Diagrama de **clases completo** que represente el modelo
-- ✅ Diagrama de **secuencia para cada uno de los casos de uso**
-
-> 🎯 Pensar el diseño de forma extensible  
-> Por ejemplo: que se pueda agregar fácilmente una nueva característica como “Tipo de neumáticos” o “Número de accidentes”.
+Realizar diagramas de secuencia para los dos casos de uso indicados.
